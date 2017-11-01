@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "realm" : "/",
+    "amsterVersion" : "5.5.0",
+    "entityType" : "Policies",
+    "entityId" : "test teo",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "test teo",
+    "name" : "test teo",
+    "active" : true,
+    "description" : "",
+    "resources" : [ "http://asdasd:8080/asdasd" ],
+    "applicationName" : "iPlanetAMWebAgentService",
+    "actionValues" : {
+      "GET" : true
+    },
+    "subject" : {
+      "type" : "NONE"
+    },
+    "resourceTypeUuid" : "76656a38-5f8e-401b-83aa-4ccb74ce88d2",
+    "lastModifiedBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
+    "lastModifiedDate" : "2017-11-01T14:52:50.449Z",
+    "createdBy" : "id=amadmin,ou=user,dc=openam,dc=forgerock,dc=org",
+    "creationDate" : "2017-11-01T14:51:59.646Z"
+  }
+}
