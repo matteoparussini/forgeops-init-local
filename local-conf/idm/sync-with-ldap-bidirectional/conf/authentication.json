@@ -20,15 +20,29 @@
                 "properties" : {
                     "queryOnResource" : "repo/internal/user",
                     "username" : "anonymous",
-                    "password" : "anonymous",
-                    "defaultUserRoles" : [ "openidm-reg" ]
+                    "password" : {
+                        "$crypto" : {
+                            "type" : "x-simple-encryption",
+                            "value" : {
+                                "cipher" : "AES/CBC/PKCS5Padding",
+                                "salt" : "+3WmPdQQ1qqMA7VbCEFajw==",
+                                "data" : "BadpNAgG2OnsL7hhQRQ/RA==",
+                                "iv" : "EwXJm/FvMDX5UbH/vxe2Bg==",
+                                "key" : "openidm-sym-default",
+                                "mac" : "9+eleTakVDSleIi2zCIKYA=="
+                            }
+                        }
+                    },
+                    "defaultUserRoles" : [
+                        "openidm-reg"
+                    ]
                 },
                 "enabled" : true
             },
             {
                 "name" : "MANAGED_USER",
                 "properties" : {
-                    "augmentSecurityContext": {
+                    "augmentSecurityContext" : {
                         "type" : "text/javascript",
                         "source" : "require('auth/customAuthz').setProtectedAttributes(security)"
                     },
@@ -57,10 +71,13 @@
                 },
                 "enabled" : true
             },
-            {   "name" : "CLIENT_CERT",
+            {
+                "name" : "CLIENT_CERT",
                 "properties" : {
                     "queryOnResource" : "security/truststore",
-                    "defaultUserRoles" : [ "openidm-cert" ],
+                    "defaultUserRoles" : [
+                        "openidm-cert"
+                    ],
                     "allowedAuthenticationIdPatterns" : [ ]
                 },
                 "enabled" : true
@@ -68,7 +85,7 @@
             {
                 "name" : "PASSTHROUGH",
                 "properties" : {
-                    "augmentSecurityContext": {
+                    "augmentSecurityContext" : {
                         "type" : "text/javascript",
                         "file" : "auth/populateAsManagedUser.js"
                     },
