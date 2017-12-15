@@ -1,0 +1,16 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "5.5.0",
+    "entityType" : "Realms",
+    "entityId" : "L2N1c3RvbWVycw",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "L2N1c3RvbWVycw",
+    "parentPath" : "/",
+    "active" : true,
+    "name" : "customers",
+    "aliases" : [ ]
+  }
+}
